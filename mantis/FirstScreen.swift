@@ -12,7 +12,7 @@ class FirstScreen: UIViewController {
     func setupButton(){
         view.addSubview(nextButton)
         nextButton.configuration = .filled()
-        nextButton.configuration?.baseBackgroundColor = .systemRed
+        nextButton.configuration?.baseBackgroundColor = .systemPink
         nextButton.configuration?.title = "NEXT"
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
