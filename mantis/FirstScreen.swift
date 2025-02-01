@@ -2,34 +2,24 @@ import UIKit
 
 class FirstScreen: UIViewController {
     
-    let nextButton = UIButton()
+    let label = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupButton()
+        view.backgroundColor = .systemPink
+        textSetup()
     }
-
-    func setupButton(){
-        view.addSubview(nextButton)
-        nextButton.configuration = .filled()
-        nextButton.configuration?.baseBackgroundColor = .systemPink
-        nextButton.configuration?.title = "NEXT"
-        nextButton.translatesAutoresizingMaskIntoConstraints = false
+    
+    func textSetup(){
+        view.addSubview(label)
+        label.text = "HEllo world"
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            nextButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            nextButton.widthAnchor.constraint(equalToConstant: 200),
-            nextButton.heightAnchor.constraint(equalToConstant: 50)
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
-        
-        
-        nextButton.addTarget(self, action: #selector(goToNextScreen), for: .touchUpInside)
-        
     }
-    @objc func goToNextScreen(){
-        let nextScreen = SecondScreen()
-        nextScreen.title = "Second Screen"
-        navigationController?.pushViewController(nextScreen, animated: true)
-    }
+    
 }
 
