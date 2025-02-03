@@ -6,7 +6,7 @@ class FirstScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemTeal
+        view.backgroundColor = .systemMint
         textSetup()
     }
     
