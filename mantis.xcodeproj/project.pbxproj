@@ -14,7 +14,7 @@
 		E176B8742D491E85004A0755 /* Exceptions for "mantis" folder in "mantis" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = E176B8612D491E85004A0755 /* mantis */;
 		};
