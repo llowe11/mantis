@@ -12,7 +12,7 @@ class FirstScreen: UIViewController {
     
     func textSetup(){
         view.addSubview(label)
-        label.text = "random"
+        label.text = "random text"
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
