@@ -9,9 +9,11 @@ class HomeViewController: UIViewController {
     }()
     
     private var homeButton:UIButton = {
-        let hButton = UIButton()
+        let hButton = UIButton(type: .system)
         hButton.setTitle("click", for: .normal)
-        hButton.backgroundColor = .white
+        hButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        hButton.backgroundColor = .blue
+        hButton.setTitleColor(.white, for: .normal)
         return hButton
     }()
     override func viewDidLoad() {
