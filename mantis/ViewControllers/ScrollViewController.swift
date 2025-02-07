@@ -12,7 +12,7 @@ class ScrollViewController: UIViewController {
     }()
     
     private let rectHeight: CGFloat = 200
-    private let numOfBlocks = 20
+    private let numOfBlocks = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
