@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
         let hButton = UIButton(type: .system)
         hButton.setTitle("click", for: .normal)
         hButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        hButton.backgroundColor = .blue
+        hButton.backgroundColor = .systemBlue
         hButton.setTitleColor(.white, for: .normal)
         return hButton
     }()
