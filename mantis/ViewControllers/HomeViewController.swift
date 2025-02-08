@@ -2,7 +2,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     override func viewDidLoad() {
-        view.backgroundColor = .yellow
+        view.backgroundColor = .systemBackground
 
     }
     
