@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
         
         for i in 1...15 {
                     let label = UILabel()
-                    label.text = "\(i)"
+                    label.text = "Элемент \(i)"
                     label.textAlignment = .center
                     label.backgroundColor = .systemGray5
                     label.heightAnchor.constraint(equalToConstant: 50).isActive = true
