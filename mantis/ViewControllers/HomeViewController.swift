@@ -23,9 +23,9 @@ class HomeViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(stackView)
         
-        for i in 1...20 {
+        for i in 1...15 {
                     let label = UILabel()
-                    label.text = "\(i)"
+                    label.text = "Element \(i)"
                     label.textAlignment = .center
                     label.backgroundColor = .systemGray5
                     label.heightAnchor.constraint(equalToConstant: 50).isActive = true
