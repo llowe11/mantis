@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(stackView)
         
-        for i in 1...10 {
+        for i in 1...15 {
                     let label = UILabel()
                     label.text = "Элемент \(i)"
                     label.textAlignment = .center
