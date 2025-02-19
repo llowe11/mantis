@@ -24,14 +24,6 @@ class HomeViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(stackView)
         
-        for i in 1...15 {
-                    let label = UILabel()
-                    label.text = "Элемент \(i)"
-                    label.textAlignment = .center
-                    label.backgroundColor = .systemGray5
-                    label.heightAnchor.constraint(equalToConstant: 50).isActive = true
-                    stackView.addArrangedSubview(label)
-        }
         NSLayoutConstraint.activate([
                     scrollView.topAnchor.constraint(equalTo: view.topAnchor),
                     scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
