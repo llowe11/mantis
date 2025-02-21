@@ -30,9 +30,16 @@ class UiTabBarViewController: UITabBarController {
             image: UIImage(systemName: "person"),
             selectedImage: UIImage(systemName: "person.fill")
         )
-        
-        
         tabBar.tintColor = .label
+        
+        
+        
+        
+        let appearance = UITabBarAppearance()
+        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.clear]
+        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.label]
+        tabBar.standardAppearance = appearance
+        
         
         
         setViewControllers([vc1,vc2,vc3,vc4], animated: true)
