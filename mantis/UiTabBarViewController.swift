@@ -10,10 +10,27 @@ class UiTabBarViewController: UITabBarController {
         let vc3 = UINavigationController(rootViewController: SearchViewController())
         let vc4 = UINavigationController(rootViewController: DownloadsViewController())
         
-        vc1.tabBarItem.image = UIImage(systemName: "house")
-        vc2.tabBarItem.image = UIImage(systemName: "play")
-        vc3.tabBarItem.image = UIImage(systemName: "book")
-        vc4.tabBarItem.image = UIImage(systemName: "person")
+        vc1.tabBarItem = UITabBarItem(
+            title: "",
+            image: UIImage(systemName: "house"),
+            selectedImage: UIImage(systemName: "house.fill")
+        )
+        vc2.tabBarItem = UITabBarItem(
+            title: "",
+            image: UIImage(systemName: "play"),
+            selectedImage: UIImage(systemName: "play.fill")
+        )
+        vc3.tabBarItem = UITabBarItem(
+            title: "",
+            image: UIImage(systemName: "book"),
+            selectedImage: UIImage(systemName: "book.fill")
+        )
+        vc4.tabBarItem = UITabBarItem(
+            title: "",
+            image: UIImage(systemName: "person"),
+            selectedImage: UIImage(systemName: "person.fill")
+        )
+        
         
         tabBar.tintColor = .label
         
