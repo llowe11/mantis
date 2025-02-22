@@ -1,6 +1,6 @@
 import UIKit
 
-class SearchViewController: UIViewController {
+class PlayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

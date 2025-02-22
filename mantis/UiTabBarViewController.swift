@@ -6,9 +6,9 @@ class UiTabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         let vc1 = UINavigationController(rootViewController: HomeViewController())
-        let vc2 = UINavigationController(rootViewController: UpcomingViewController())
-        let vc3 = UINavigationController(rootViewController: SearchViewController())
-        let vc4 = UINavigationController(rootViewController: DownloadsViewController())
+        let vc2 = UINavigationController(rootViewController: PlayViewController())
+        let vc3 = UINavigationController(rootViewController: LibraryViewController())
+        let vc4 = UINavigationController(rootViewController: ProfileViewController())
         
         vc1.tabBarItem = UITabBarItem(
             title: "",
