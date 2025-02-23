@@ -1,14 +1,13 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    private let VStack = UIStackView()
+    let stackView = UIStackView()
+    let scrollView = UIScrollView()
     override func viewDidLoad() {
         view.backgroundColor = .systemBackground
         
-        VStack.axis = .vertical
-        VStack.spacing = 10
-        
-        view.addSubview(VStack)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.translatesAutoresizingMaskIntoConstraints = false
     }
     
 }
