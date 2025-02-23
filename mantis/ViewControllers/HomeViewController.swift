@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
             let lbl = UILabel()
             lbl.text = "Hello world"
             lbl.textColor = .black
-            lbl.font = UIFont.systemFont(ofSize: 16)
+            lbl.font = UIFont.systemFont(ofSize: 17)
             return lbl
         }()
         
