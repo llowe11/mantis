@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
         }()
         
         stackView.addArrangedSubview(label)
+        
     }
     
 }
