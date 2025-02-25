@@ -1,47 +1,67 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    let stackView = UIStackView()
+    
     let scrollView = UIScrollView()
+    let stackView = UIStackView()
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         view.backgroundColor = .systemBackground
         
+        setupScrollView()
+        setupStackView()
+        addContentToStackView()
+    }
+    
+    private func setupScrollView() {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(scrollView)
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor)
+            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
-        
-        
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.alignment = .fill
-        stackView.distribution = .fill
-        stackView.spacing = 16
-        
-        view.addSubview(stackView)
-        
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.bottomAnchor),
-            stackView.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor),
-            stackView.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor)
-        ])
-        
-        let label: UILabel = {
-            let lbl = UILabel()
-            lbl.text = "Hello world"
-            lbl.textColor = .black
-            lbl.font = UIFont.systemFont(ofSize: 17)
-            return lbl
-        }()
-        
-        stackView.addArrangedSubview(label)
-        
     }
     
+    private func setupStackView() {
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.addSubview(stackView)
+        
+        stackView.axis = .vertical
+        stackView.spacing = 8
+        stackView.alignment = .fill
+        stackView.distribution = .fill
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+        ])
+    }
+    
+    private func addContentToStackView() {
+        for _ in 1...10 {
+            let imageView = UIImageView()
+            imageView.image = UIImage(named: "exampleImage")
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
+            
+            // Setting a fixed height for the image view
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+            
+            stackView.addArrangedSubview(imageView)
+            
+            let label = UILabel()
+            label.text = "Hello world"
+            label.textColor = .black
+            label.font = UIFont.systemFont(ofSize: 17)
+            stackView.addArrangedSubview(label)
+        }
+    }
 }
